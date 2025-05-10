@@ -5,6 +5,7 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const expenseRoutes = require('./routes/expenseRoutes');
 const savingsGoalRoutes = require('./routes/savingsGoalRoutes');
+const analyticsRoutes = require('./routes/analyticsRoutes');
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/expenses', expenseRoutes);
 app.use('/api/goals', savingsGoalRoutes);
+app.use('/api/analytics', analyticsRoutes);
 
 // Swagger Documentation
 const swaggerUi = require('swagger-ui-express');
